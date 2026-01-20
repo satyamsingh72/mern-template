@@ -1,0 +1,19 @@
+services:
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND_URL=http://server:5000
+    depends_on:
+      - server
+
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb+srv://satyamsinghbhardwaj72_db_user:rgmkp09sWTVDpFf3@cluster0.tpy17ux.mongodb.net/mydb
+ 
