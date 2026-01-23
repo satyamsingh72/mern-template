@@ -20,7 +20,8 @@ const bootstrap = async () => {
   app.use('/auth', authRoutes)
   // add rest of routes here...
 
-  app.listen(PORT, () => {
+  // IMPORTANT: Bind to 0.0.0.0 so it is accessible outside Docker
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ Server is listening on port: ${PORT}`)
   })
 }
