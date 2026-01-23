@@ -1,7 +1,7 @@
 services:
 
   client:
-    build: ./client
+    image: satyam3singh/client-app:${BUILD_NUMBER}
     container_name: client-app
     ports:
       - "3000:3000"
@@ -11,7 +11,7 @@ services:
       - server
 
   server:
-    build: ./server
+    image: satyam3singh/server-app:${BUILD_NUMBER}
     container_name: server-app
     ports:
       - "5000:5000"

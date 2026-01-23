@@ -8,13 +8,12 @@ import loginWithToken from '../controllers/auth/login-with-token'
 // initialize router
 const router = express.Router()
 
-// POST at route: http://localhost:8080/auth/register
+
 router.post('/register', [], register, errorHandler)
 
-// POST at path: http://localhost:8080/auth/login
 router.post('/login', [], login, errorHandler)
 
-// GET at path: http://localhost:8080/auth/account
+
 router.get('/login', [checkBearerToken], loginWithToken, errorHandler)
 
 export default router
