@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - REACT_APP_BACKEND_URL=http://server:5000
+      - REACT_APP_BACKEND_URL=http://54.204.67.134:5000   # <-- FIXED
     depends_on:
       - server
 
@@ -18,4 +18,3 @@ services:
     environment:
       - PORT=5000
       - MONGO_URI=mongodb+srv://satyamsinghbhardwaj72_db_user:rgmkp09sWTVDpFf3@cluster0.tpy17ux.mongodb.net/mydb
- 
