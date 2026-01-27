@@ -36,7 +36,7 @@ const Header: React.FC<Props> = () => {
   return (
     <AppBar className='header' position='static'>
       <h1>React Authentication App</h1>
-      <br>
+      <br/>
       <h4>By --Satyam Singh Bhardwaj</h4>
 
       <IconButton onClick={openPopover}>
